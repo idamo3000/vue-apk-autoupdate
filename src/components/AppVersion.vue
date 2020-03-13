@@ -18,7 +18,10 @@
     name: 'appVersion',
     props: [],
     mounted() {
-      this.checkVersion(); // 如果是plus5，则自动执行该函数
+              // 放在局部可以吗？
+      document.addEventListener('plusready', ()=>{
+          this.checkVersion(); // 如果是plus5，则自动执行该函数
+      });
     },
     created(){
       
